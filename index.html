@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <title>Responsive Website!</title>
+</head>
+
+<body>
+
+  <div class="wrapper container">
+
+      <div class="header">
+      <div class="logo">
+        <img src='images/logo.png' alt=""/>
+      </div>
+
+      <nav class="menu">
+        <button aria-expanded="false" aria-controls="menu__list" class="btn btn-dark">
+          <span class="menu__open">☰</span>
+          <span class="menu__close">×</span>
+          Menu
+        </button>
+        <ul class="menu__list">
+          <li>
+            <a href="">Item 1</a>
+          </li>
+          <li>
+            <a href="">Item 2</a>
+          </li>
+          <li>
+            <a href="">Item 3</a>
+          </li>
+          <li>
+            <a href="">Item 4</a>
+          </li>
+        </ul>
+      </nav>
+  </div>
+
+    <section class="about">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+        <button class="btn btn-dark">Learn More →</button>
+    </section>
+
+    <section class="features">
+      <div class="features__ature">
+        <h3>Tacos</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+      </div>
+      <div class="features__feature">
+        <h3>Beer</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+      </div>
+      <div class="features__feature">
+        <h3>Wine</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const navButton = document.querySelector('button[aria-expanded]');
+
+    function toggleNav({ target }) {
+      const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+      navButton.setAttribute('aria-expanded', !expanded);
+    }
+
+    navButton.addEventListener('click', toggleNav);
+
+  </script>
+  
+</body>
+
+</html>
